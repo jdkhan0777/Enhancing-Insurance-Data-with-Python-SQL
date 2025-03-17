@@ -1,20 +1,20 @@
 
 
 ### SQL Queries:
-1. **Count total customers**  
+1. Count total customers 
    - _"How many customers are in the dataset?"_  
    ```sql
    SELECT COUNT(*) FROM insurance_data;
    ```
 
-2. **Find unique values**  
+2. Find unique values  
    - _"What are the different types of coverage available?"_  
    ```sql
    SELECT DISTINCT Coverage FROM insurance_data;
    ```
 
 
-3. **Average claim amount per coverage type**  
+3. Average claim amount per coverage type 
    - _"What is the average total claim amount for each type of coverage?"_  
    ```sql
    SELECT Coverage, AVG(Total_Claim_Amount) AS Avg_Claim_Amount
@@ -22,7 +22,7 @@
    GROUP BY Coverage;
    ```
 
-4. **Total number of policies by employment status**  
+4. Total number of policies by employment status
    - _"How many policies are held by customers based on their employment status?"_  
    ```sql
    SELECT EmploymentStatus, SUM(Number_of_Policies) AS Total_Policies
@@ -31,14 +31,14 @@
    ```
 
 
-5. **High-value customers**  
+5. High-value customers
    - _"Find customers with a CLV (Customer Lifetime Value) greater than 10,000."_
    ```sql
    SELECT * FROM insurance_data
    WHERE CLV > 10000;
    ```
 
-6. **Claims made by suburban customers**  
+6. Claims made by suburban customers 
    - _"What is the total claim amount from customers living in suburban areas?"_  
    ```sql
    SELECT SUM(Total_Claim_Amount) AS Total_Suburban_Claims
@@ -47,7 +47,7 @@
    ```
 
 
-7. **Top 5 highest paying customers**  
+7. Top 5 highest paying customers 
    - _"Which five customers have the highest total claim amount?"_  
    ```sql
    SELECT * FROM insurance_data
@@ -55,7 +55,7 @@
    LIMIT 5;
    ```
 
-8. **Monthly premium statistics by policy type**  
+8. Monthly premium statistics by policy type  
    - _"What is the average, min, and max monthly premium for each policy type?"_  
    ```sql
    SELECT Policy_Type, 
@@ -66,7 +66,7 @@
    GROUP BY Policy_Type;
    ```
 
-9. **Claims by vehicle class**  
+9. Claims by vehicle class
    - _"What is the total number of claims for each vehicle class?"_  
    ```sql
    SELECT Vehicle_Class, COUNT(*) AS Claim_Count
@@ -74,7 +74,7 @@
    GROUP BY Vehicle_Class;
    ```
 
-10. **Customers with complaints**  
+10. Customers with complaints
    - _"How many customers have at least one open complaint?"_  
    ```sql
    SELECT COUNT(*) FROM insurance_data
