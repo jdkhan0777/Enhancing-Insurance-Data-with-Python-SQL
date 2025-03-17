@@ -37,6 +37,4 @@
    Extracted valuable insights on policy renewals and customer engagement.  
    Provided structured, SQL-ready data for further predictive modeling.  
 
----
 
-You can modify this based on what exactly you did and the tools you used. Does this version work for you? 🚀
